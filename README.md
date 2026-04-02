@@ -66,10 +66,10 @@ Skrip ini terhubung ke Appium Server melalui konfigurasi berikut (seperti yang t
 1. **Analisis Critical Path Automation**  
 
    Dari seluruh rangkaian test automation yang telah dibuat, skenario yang paling kritikal adalah **Login Automation** dan **Add-to-Cart Automation**.
-    * **Mengapa Sangat Penting?**
+    * **Mengapa Sangat Penting?**  
       Login merupakan "pintu masuk" utama. Hampir seluruh fitur fungsional lainnya bergantung pada keberhasilan proses autentikasi. Sementara itu, Add-to-Cart adalah alur bisnis inti.
 
-    * **Risiko jika gagal**
+    * **Risiko jika gagal**  
       Jika skenario Login gagal maka kedepannya akan menjadi *blocker* total bagi pengujian fitur lainnya. Jika skenario Add-to-Cart gagal namun aplikasi tetap dirilis, risikonya adalah kerugian finansial langsung bagi perusahaan karena pengguna tidak dapat melakukan pembelian.
    
 
