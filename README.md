@@ -82,3 +82,6 @@ Tantangan terbesar saat mengidentifikasi elemen menggunakan Appium Inspector ada
    Saya memprioritaskan penggunaan **Accessibility ID (content-desc)** karena paling stabil dan memang dirancang khusus untuk keperluan pengujian. Saya menghindari penggunaan **XPath** yang terlalu panjang karena sangat rentan terhadap perubahan struktur UI aplikasi.
     * **Pengaruh terhadap Reliability:**  
       Pemilihan locator yang stabil meningkatkan **Reliability** skrip agar tidak mudah "patah" saat ada update minor pada desain aplikasi. Penanganan elemen dinamis dengan Exception Handling juga berhasil mengurangi tingkat **Flakiness**
+
+# 📹 Video
+![HasilPengujianMobileAutomation](https://github.com/user-attachments/assets/498e6df4-f1a1-4a22-a02d-e85f07da83d5)
