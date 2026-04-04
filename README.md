@@ -11,7 +11,6 @@ Proyek ini adalah framework *automation* pengujian _mobile_ untuk aplikasi **Sau
 * **Build Tool:** Gradle
 * **IDE:** IntelliJ IDEA
 * **Platform:** Android 14 (API 34)
-
 ---
 
 ## 📂 Project Structure
@@ -19,20 +18,23 @@ Struktur folder diatur sedemikian rupa untuk memisahkan antara konfigurasi drive
 
 ```text
 saucelabs-mobile-automation/
-├── apk/                  # File aplikasi .apk (saucedemo.apk)
+├── apk/                         # File aplikasi .apk (saucedemo.apk)
 ├── src/test/java/
-│   ├── base/             # Setup & Teardown Driver (BaseTest.java)
-│   ├── pages/            # Page Objects (Locator & Action)
+│   ├── base/                    # Setup & Teardown Driver (BaseTest.java)
+│   ├── pages/                   # Page Objects (Locator & Action)
 │   │   ├── LoginPage.java
 │   │   └── AddToCartPage.java
-│   ├── tests/            # Skenario Pengujian (Test Cases)
+│   ├── tests/                   # Skenario Pengujian (Test Cases)
 │   │   ├── LoginTest.java
 │   │   └── AddToCartTest.java
-│   └── utils/            # Konfigurasi Tambahan (AppConfig.java)
-└── build.gradle          # Manajemen Dependensi Project
+│   └── utils/                   # Konfigurasi Tambahan (AppConfig.java)
+├── build.gradle                 # Manajemen Dependensi Project
+├── README.md                    # Dokumentasi panduan penggunaan proyek saucelabs
+└── settings.gradle              # Nama dari proyek yang dibuat
 ```
 ---
-# ⚙️ Configuration & Desire Capabilities
+
+## ⚙️ Configuration & Desire Capabilities
 Skrip ini terhubung ke Appium Server melalui konfigurasi berikut (seperti yang terlihat pada Appium Inspector):
 
 | Capability      | Type |      Value       |
@@ -43,23 +45,21 @@ Skrip ini terhubung ke Appium Server melalui konfigurasi berikut (seperti yang t
 | appWaitActivity | Text |        *         |
 | automationName  | Text |  UIAutomation2   |
 | app             | Text | mda-2.2.0-25.apk |
-
 ---
 
-# 🧪 Scenario Test
+## 🧪 Scenario Test
 
 | Fitur       | Status |               Catatan                |
 |:------------|:------:|:------------------------------------:|
-| Login       | ✅ Pass | Berhasil dengan akun bod@example.com |
-| Add to Cart | ✅ Pass |      Badge bertambah menjadi 1       |
-
+| Login       |   ✅    | Berhasil dengan akun bod@example.com |
+| Add to Cart |   ✅    |      Badge bertambah menjadi 1       |
 ---
 
-# 🚀 How to Run
+## 🚀 How to Run
 
 1. Persiapan: Pastikan Android Emulator (Android 14) sudah aktif dan berada di Home Screen.
 2. Appium Server: Jalankan Appium Server melalui terminal Mac dengan perintah:`Appium`
-
+3. Terminal : Ketikkan perintah diterminal Mac `./gradlew clean test`
 ---
 
 # 📝 Reflection Questions
@@ -74,7 +74,7 @@ Skrip ini terhubung ke Appium Server melalui konfigurasi berikut (seperti yang t
    
 
 2. **Analisis Locator & Stabilitas Testing**  
-Tantangan terbesar saat mengidentifikasi elemen menggunakan Appium Inspector adalah menghadapi elemen yang bersifat dinamis atau tidak konsisten kemunculannya, terutama pada **Badge Angka Keranjang (Cart Badge)**.
+Tantangan terbesar saat mengidentifikasi elemen menggunakan Appium Inspector adalah menghadapi elemen yang bersifat dinamis atau tidak konsisten kemunculannya, terutama pada **Badge Angka Keranjang _(Cart Badge)_**.
 
     * **Kendala yang ditemui:**  
    Elemen badge keranjang tidak muncul dalam *App Source* jika keranjang kosong.
