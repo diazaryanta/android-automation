@@ -19,6 +19,9 @@ Struktur folder diatur sedemikian rupa untuk memisahkan antara konfigurasi drive
 ```text
 saucelabs-mobile-automation/
 ├── apk/                         # File aplikasi .apk (saucedemo.apk)
+├── reports/                     # Folder hasil eksekusi report & screenshots
+│   ├── screenshot/              
+│   └── ExtendReport.html        
 ├── src/test/java/
 │   ├── base/                    # Setup & Teardown Driver (BaseTest.java)
 │   ├── pages/                   # Page Objects (Locator & Action)
