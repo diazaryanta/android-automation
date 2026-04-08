@@ -2,10 +2,13 @@ package tests;
 
 import base.BaseTest;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.AddToCartPage;
+import utils.TestListener;
 
+@Listeners(TestListener.class)
 public class AddToCartTest extends BaseTest {
 
     @Test
